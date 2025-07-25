@@ -9,4 +9,4 @@ IF '%ERRORLEVEL%' NEQ '0' (
 
 :: Your elevated commands go below
 powershell -Command "Set-ExecutionPolicy Unrestricted -Scope LocalMachine -Force"
-powershell.exe -executionpolicy unrestricted .\robloxinstaller
+powershell -executionpolicy unrestricted .\robloxinstaller

